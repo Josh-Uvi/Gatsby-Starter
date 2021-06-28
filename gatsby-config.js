@@ -6,6 +6,19 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Gatsby Starter With Github Actions",
+  },
   pathPrefix: "/Gatsby-Starter",
-  plugins: [],
+  plugins: [
+    {
+      resolve: "gatsby-plugin-eslint",
+      options: {
+        stages: ["develop"],
+        extensions: ["js", "jsx"],
+        exclude: ["node_modules", ".cache", "public"],
+        // Any eslint-webpack-plugin options below
+      },
+    },
+  ],
 }

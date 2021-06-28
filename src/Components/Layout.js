@@ -1,6 +1,7 @@
 import React from "react"
 import NavBar from "./NavBar"
 import "../styles/global.css"
+import PropTypes from "prop-types"
 
 export default function Layout({ children }) {
   return (
@@ -21,4 +22,8 @@ export default function Layout({ children }) {
       </footer>
     </div>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.any,
 }
