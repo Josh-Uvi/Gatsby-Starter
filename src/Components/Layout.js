@@ -9,7 +9,14 @@ export default function Layout({ children }) {
       <div className="content">{children}</div>
       <footer>
         <p>
-          Produced by <a href="https://github.com/Josh-Uvi">Josh Uvi</a>
+          Produced by{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/Josh-Uvi"
+          >
+            Josh Uvi
+          </a>
         </p>
       </footer>
     </div>

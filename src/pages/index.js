@@ -18,7 +18,11 @@ export default function Home() {
             This starter pack will also include deployment to gh-pages for easy
             integration, other services like netlify and heroku can be used.
           </p>
-          <Link className={styles.btn} to="https://github.com/Josh-Uvi">
+          <Link
+            className={styles.btn}
+            target="_blank"
+            to="https://github.com/Josh-Uvi"
+          >
             Check out the repo here
           </Link>
         </div>
