@@ -6,9 +6,10 @@ export default function About() {
       <div>
         <h2>About Page</h2>
         <p>
-          This is a simple starter project for developing and deploying gatsby
-          applications using github actions to create CI/CD pipeline to automate
-          the deployment process.
+          This is a simple starter project to develop and deploy gatsby
+          applications. It also uses github actions to create CI/CD pipeline to
+          automate the deployment process. This starter project is deploy to
+          github pages.
         </p>
       </div>
     </Layout>

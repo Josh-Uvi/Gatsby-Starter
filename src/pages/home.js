@@ -1,9 +1,11 @@
-import { Link } from "gatsby"
 import React from "react"
 import Layout from "../Components/Layout"
 import * as styles from "../styles/home.module.css"
+import Form from "../Components/Form"
 
 export default function Home() {
+  // const handleBtn = () => {}
+
   return (
     <Layout>
       <main className={styles.header}>
@@ -18,13 +20,21 @@ export default function Home() {
             This starter pack will also include deployment to gh-pages for easy
             integration, other services like netlify and heroku can be used.
           </p>
-          <Link
+          <hr className={styles.linebreak} />
+          <h4 className={styles.title}>
+            Study Case: Housing Development Portal for GDS
+          </h4>
+          <Form />
+        </div>
+        <div>
+          <a
             className={styles.btn}
             target="_blank"
-            to="https://github.com/Josh-Uvi/Gatsby-Starter"
+            rel="noopener noreferrer"
+            href="https://github.com/Josh-Uvi/Gatsby-Starter"
           >
             Check out the repo here
-          </Link>
+          </a>
         </div>
       </main>
     </Layout>

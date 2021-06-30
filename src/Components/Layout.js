@@ -13,7 +13,7 @@ export default function Layout({ children }) {
           Produced by{" "}
           <a
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             href="https://github.com/Josh-Uvi"
           >
             Josh Uvi
