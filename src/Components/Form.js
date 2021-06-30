@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import * as styles from "../styles/home.module.css"
+import * as styles from "../styles/form.module.css"
 
 export default function Form() {
   const [number, setNumber] = useState("")
@@ -23,6 +23,7 @@ export default function Form() {
           type="text"
           placeholder=" e.g. HBFGEBH78678648"
           onChange={handleChange}
+          required
         />
         <button type="submit">Submit</button>
       </form>

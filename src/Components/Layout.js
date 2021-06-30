@@ -2,6 +2,7 @@ import React from "react"
 import NavBar from "./NavBar"
 import "../styles/global.css"
 import PropTypes from "prop-types"
+import Link from "./Link"
 
 export default function Layout({ children }) {
   return (
@@ -11,13 +12,7 @@ export default function Layout({ children }) {
       <footer>
         <p>
           Produced by{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/Josh-Uvi"
-          >
-            Josh Uvi
-          </a>
+          <Link text="Josh Uvi" link="https://github.com/Josh-Uvi" />
         </p>
       </footer>
     </div>

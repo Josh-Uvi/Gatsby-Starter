@@ -5,8 +5,8 @@ import About from "./about"
 import NotFound from "./404"
 
 const App = () => (
-  // <Router basepath="/Gatsby-Starter"> for prod.
-  <Router basepath="/">
+  <Router basepath="/Gatsby-Starter">
+    {/* <Router basepath="/"> */}
     <Home path="/" />
     <About path="/about" />
     <NotFound path="*" />

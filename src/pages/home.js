@@ -2,10 +2,9 @@ import React from "react"
 import Layout from "../Components/Layout"
 import * as styles from "../styles/home.module.css"
 import Form from "../Components/Form"
+import Link from "../Components/Link"
 
 export default function Home() {
-  // const handleBtn = () => {}
-
   return (
     <Layout>
       <main className={styles.header}>
@@ -27,14 +26,11 @@ export default function Home() {
           <Form />
         </div>
         <div>
-          <a
-            className={styles.btn}
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/Josh-Uvi/Gatsby-Starter"
-          >
-            Check out the repo here
-          </a>
+          <Link
+            text="Check out the repo here"
+            link="https://github.com/Josh-Uvi/Gatsby-Starter"
+            style={styles.btn}
+          />
         </div>
       </main>
     </Layout>
