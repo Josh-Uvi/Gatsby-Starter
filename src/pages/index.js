@@ -3,14 +3,19 @@ import { Router } from "@reach/router"
 import Home from "./home"
 import About from "./about"
 import NotFound from "./404"
+import News from "./news"
 
 const App = () => (
-  <Router basepath="/Gatsby-Starter">
-    {/* <Router basepath="/"> */}
-    <Home path="/" />
-    <About path="/about" />
-    <NotFound path="*" />
-  </Router>
+  <React.Fragment>
+    <Router
+      basepath={process.env.NODE_ENV !== "production" ? "/" : "/Gatsby-Starter"}
+    >
+      <Home path="/" />
+      <About path="/about" />
+      <News path="/news" />
+      <NotFound path="*" />
+    </Router>
+  </React.Fragment>
 )
 
 export default App

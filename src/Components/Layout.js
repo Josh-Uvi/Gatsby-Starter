@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   return (
     <div className="layout">
       <NavBar />
-      <div className="content">{children}</div>
+      <main className="content">{children}</main>
       <footer>
         <p>
           Produced by{" "}

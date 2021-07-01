@@ -7,6 +7,7 @@ export default function NavBar() {
       <h2>Gatsby Starter</h2>
       <div className="links">
         <Link to="/">Home</Link>
+        <Link to="/news">News</Link>
         <Link to="/about">About</Link>
       </div>
     </nav>

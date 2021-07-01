@@ -3,6 +3,9 @@
  *
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   /* Your site config here */
@@ -11,6 +14,9 @@ module.exports = {
   },
   pathPrefix: "/Gatsby-Starter",
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-json`,
     {
       resolve: "gatsby-plugin-eslint",
       options: {
@@ -18,6 +24,20 @@ module.exports = {
         extensions: ["js", "jsx"],
         exclude: ["node_modules", ".cache", "public"],
         // Any eslint-webpack-plugin options below
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `news`,
+        path: `${__dirname}/src/data/`,
       },
     },
   ],
