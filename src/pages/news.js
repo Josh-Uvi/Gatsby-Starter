@@ -23,7 +23,7 @@ export default function News({ data }) {
 const NewsItems = ({ news }) => (
   <div className={styles.card}>
     <StaticImage
-      src="../images/thoughtworks_flamingo_white.png"
+      src="../images/tw-logo.png"
       alt="image"
       layout="fixed"
       height={50}
