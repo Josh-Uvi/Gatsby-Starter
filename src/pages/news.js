@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+
 import * as styles from "../styles/news.module.css"
 import Layout from "../Components/Layout"
 import PropTypes from "prop-types"
@@ -11,16 +13,25 @@ export default function News({ data }) {
 
   return (
     <Layout>
-      <div className={styles.newsContainer}>
-        {articles.map(article => (
-          <NewsItems key={article.title} news={article} />
-        ))}
-      </div>
+      {articles.map(article => (
+        <NewsItems key={article.title} news={article} />
+      ))}
     </Layout>
   )
 }
 
-const NewsItems = ({ news }) => <p className={styles.card}>{news.title}</p>
+const NewsItems = ({ news }) => (
+  <div className={styles.card}>
+    <StaticImage
+      src="../images/thoughtworks_flamingo_white.png"
+      alt="image"
+      layout="fixed"
+      height={50}
+      width={100}
+    />
+    <p>{news.title}</p>
+  </div>
+)
 
 News.propTypes = {
   data: PropTypes.object,

@@ -16,6 +16,7 @@ module.exports = {
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-json`,
     {
       resolve: "gatsby-plugin-eslint",
@@ -30,7 +31,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static/images/`,
+        path: `${__dirname}/src/images/`,
       },
     },
     {
