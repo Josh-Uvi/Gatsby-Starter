@@ -41,16 +41,16 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
-    {
-      resolve: `gatsby-plugin-remote-images`,
-      options: {
-        nodeType: "DataJson",
-        imagePath: "articles[].urlToImage",
-        // OPTIONAL: Name you want to give new image field on the node.
-        // Defaults to 'localImage'.
-        name: "remoteImage",
-        type: "array",
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-remote-images`,
+    //   options: {
+    //     nodeType: "DataJson",
+    //     imagePath: "articles[].urlToImage",
+    //     // OPTIONAL: Name you want to give new image field on the node.
+    //     // Defaults to 'localImage'.
+    //     name: "remoteImage",
+    //     type: "array",
+    //   },
+    // },
   ],
 }

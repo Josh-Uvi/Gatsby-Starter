@@ -7,33 +7,13 @@ import NewsItems from "../Components/NewsItem"
 
 export default function News({ data }) {
   const {
-    dataJson: { articles, remoteImage },
+    dataJson: { articles },
   } = data
-
-  // const newImage = remoteImage.map(item => {
-  //   const container = {}
-
-  //   container.name = item.name
-  //   container.image = item.childImageSharp
-
-  //   return container
-  // })
-
-  const image = remoteImage.map(item => console.log(item.name))
 
   return (
     <Layout>
       {articles.map((article, index) => {
-        const container = {}
-        container.name = article.source.name
-        container.title = article.title
-        container.description = article.description
-        container.publishedAt = article.publishedAt
-        // container.urlToImage = remoteImage
-
-        // console.log(container)
-
-        return <NewsItems key={index} news={article} image={image} />
+        return <NewsItems key={index} news={article} />
       })}
     </Layout>
   )
@@ -55,12 +35,6 @@ export const query = graphql`
         title
         url
         urlToImage
-      }
-      remoteImage {
-        name
-        childImageSharp {
-          gatsbyImageData
-        }
       }
     }
   }

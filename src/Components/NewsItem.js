@@ -3,27 +3,28 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import * as styles from "../styles/news.module.css"
+import logo from "../images/news-logo.png"
+import Link from "./Link"
 
-const NewsItems = ({ news, image }) => {
-  // console.log(news.urlToImage)
-
-  // const logo =
-  //   "https://www.autocar.co.uk/sites/autocar.co.uk/files/slideshow_image/00-25-volvo-ycc-volvo_-_copy.jpg"
+const NewsItems = ({ news }) => {
+  const image = news.urlToImage || logo
 
   return (
     <div className={styles.card}>
-      {/* <Img key={news.publicURL} fixed={image} /> */}
-      {/* <StaticImage src={image} alt="image" width={100} /> */}
+      {/* <StaticImage src={image} alt="image" /> */}
       <img src={image} alt="image" />
-      <p>{news.title}</p>
-      <p>{news.source.name}</p>
-      <p>{news.publishedAt}</p>
+      <div className={styles.content}>
+        <Link text={news.title} link={news.url} style={styles.header} />
+        <div className={styles.footer}>
+          <p className={styles.name}>{news.source.name}</p>
+          <span className={styles.time}>{news.publishedAt}</span>
+        </div>
+      </div>
     </div>
   )
 }
 NewsItems.propTypes = {
   news: PropTypes.object,
-  image: PropTypes.array,
 }
 
 export default NewsItems

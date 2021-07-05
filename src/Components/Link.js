@@ -1,16 +1,27 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+const LinkContainer = ({ children }) => <>{children}</>
+
+LinkContainer.propTypes = { children: PropTypes.object }
+
 export default function Link({ text, link, style }) {
   return (
-    <a className={style} target="_blank" rel="noopener noreferrer" href={link}>
-      {text}
-    </a>
+    <LinkContainer>
+      <a
+        className={style}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={link}
+      >
+        {text}
+      </a>
+    </LinkContainer>
   )
 }
 
 Link.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   link: PropTypes.string.isRequired,
   style: PropTypes.string,
 }
